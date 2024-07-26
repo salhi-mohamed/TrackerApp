@@ -1,0 +1,89 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .background-wrapper {
+    background-image: url('https://images.unsplash.com/photo-1514474959185-1472d4c4e0d4?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .profile-container {
+    max-width: 900px;
+    min-height: 800px;
+    margin: 40px auto;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    padding: 40px;
+  }
+  
+  .profile-card {
+    text-align: center;
+  }
+  
+  .profile-image {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 5px solid #f0f0f0;
+    cursor: pointer; /* Add cursor pointer */
+    position: relative;
+  }
+  
+  .change-photo-icon {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    font-size: 1.5rem;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    padding: 5px;
+    cursor: pointer;
+  }
+  
+  .card-title {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+    color: #343a40;
+    font-size: 2.5rem;
+  }
+  
+  .fa-fw {
+    width: 1.25em;
+  }
+  
+  .row {
+    font-size: 1.5rem;
+    color: #495057;
+    margin-bottom: 15px;
+  }
+  
+  .card:hover {
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.25);
+  }
+  
+  .profile-container:hover .profile-image {
+    border-color: #007bff;
+  }
+  
+  .btn-primary {
+    font-size: 1.2rem;
+    padding: 10px 20px;
+  }
+  

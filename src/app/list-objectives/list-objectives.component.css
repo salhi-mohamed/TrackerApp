@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.flex-grow {
+  flex-grow: 1;
+}
+
+.bg-gray-100 {
+  background-image: url('https://images.pexels.com/photos/317356/pexels-photo-317356.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+  background-size: cover;
+  background-position: center;
+}
+
+.app-footer {
+  background-color: #1a202c; /* Change to a slightly different color if you want a different shade */
+  padding: 1rem 0; /* Adjust padding to decrease height */
+}
+
+.app-footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.app-footer .container p {
+  margin: 0;
+}
+
+.title-container {
+  margin-top: 4rem; /* Ajustez cette valeur selon vos besoins */
+  background: rgba(255, 255, 255, 0.7);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+app-confirm-dialog
+{
+  font-size: 40px;
+} 

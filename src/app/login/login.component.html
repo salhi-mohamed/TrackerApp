@@ -1,0 +1,22 @@
+<app-navbar></app-navbar>
+<div class="login-container">
+  <div class="login-card">
+    <h1><i class="fas fa-sign-in-alt"></i> Login</h1>
+    <form #loginform="ngForm" (ngSubmit)="onLogin()">
+      <div class="form-group">
+        <label for="email"><i class="fas fa-envelope"></i> Email</label>
+        <input id="email" name="email" type="email" placeholder="Enter email" aria-label="Email" [(ngModel)]="email" required />
+      </div>
+      <div class="form-group">
+        <label for="password"><i class="fas fa-lock"></i> Password</label>
+        <input id="password" name="password" type="password" placeholder="Enter password" aria-label="Password" [(ngModel)]="password" (input)="onPasswordInput()" required />
+       
+      </div>
+      <button type="submit" class="btn-submit" (click)="GoToHome()"><i class="fas fa-sign-in-alt"></i> Login</button>
+    </form>
+    <div class="signup-link">
+      <p>Not a member yet? <a routerLink="/subscribe">Sign up</a></p>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

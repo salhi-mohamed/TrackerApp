@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500;700&display=swap');
+
+body {
+  overflow-x: hidden;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+#about {
+  margin-top: 80px;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.section-description {
+  font-size: 1.75rem; /* Augmenté */
+  line-height: 2;
+  color: #2c3e50; /* Plus sombre pour un meilleur contraste */
+}
+
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.25rem; /* Augmenté */
+  font-weight: bold;
+  color: #2c3e50; /* Plus sombre pour un meilleur contraste */
+}
+
+.card-text {
+  font-size: 1.5rem; /* Augmenté */
+  color: #2c3e50; /* Plus sombre pour un meilleur contraste */
+}
+
+.carousel-item {
+  min-height: 300px;
+  transition: transform 0.6s ease;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: auto;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.carousel-item-next,
+.carousel-item-prev,
+.carousel-item.active {
+  display: block;
+}
+
+#carouselTestimonials .carousel-inner {
+  overflow: hidden;
+  position: relative;
+}
+
+.card-body {
+  padding: 2rem;
+  background-color: #ffffff;
+}
+
+.btn {
+  font-size: 2rem; /* Augmenté */
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  padding: 15px 30px; /* Augmenté */
+  border-radius: 50px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.btn-primary {
+  background-color: #3498db;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #2980b9;
+  transform: scale(1.1);
+}
+
+.btn-outline-primary {
+  border-color: #3498db;
+  color: #3498db;
+}
+
+.btn-outline-primary:hover {
+  background-color: #3498db;
+  color: #ffffff;
+}
+
+#decouvrez {
+  margin-right: 20px;
+}
+
+.bg-light {
+  background-color: #ecf0f1 !important;
+}
+
+.shadow-lg {
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+}
+
+.rounded-circle {
+  border-radius: 50% !important;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #d0dbe2;
+}
+
+/* Media Queries for responsive adjustments */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2.5rem;
+  }
+  
+  .section-description {
+    font-size: 1.5rem;
+  }
+  
+  .card-title {
+    font-size: 1.75rem;
+  }
+  
+  .card-text {
+    font-size: 1.25rem;
+  }
+  
+  .btn {
+    font-size: 1.75rem;
+    padding: 12px 25px;
+  }
+}

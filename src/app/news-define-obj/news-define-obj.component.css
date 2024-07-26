@@ -1,0 +1,132 @@
+.main-content {
+  padding-top: 150px; /* Increased padding top */
+  padding-bottom: 100px; /* Adjust this value based on the height of your footer */
+}
+
+.background-wrapper {
+  background: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDR8fGRlc2t8ZW58MHx8fHwxNjE5Njk3NDYx&ixlib=rb-1.2.1&q=80&w=1080') no-repeat center center;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.background-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+  z-index: -1;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9); /* Reduced transparency */
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.content-wrapper {
+  background-color: transparent; /* Fully transparent background */
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: none;
+  z-index: 1;
+}
+
+h1, h2, p, ul {
+  color: #333; /* Darker color for text */
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; /* Attractive and professional font */
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  color: #434040; /* White color for the main heading */
+  text-align: center;
+}
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  color: #434040; /* White color for subheadings */
+}
+
+p.lead {
+  font-size: 1.3rem;
+  color: #333; /* Darker color for text */
+  line-height: 1.8;
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
+p.instructions {
+  font-size: 1.2rem;
+  color: #333; /* Darker color for text */
+  line-height: 1.8;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+ul.instructions-list {
+  font-size: 1.2rem;
+  color: #333; /* Darker color for text */
+  line-height: 1.8;
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-bottom: 20px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+ul.instructions-list li {
+  margin-bottom: 10px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+button {
+  font-size: 1.2rem;
+  padding: 12px 24px;
+  background-color: #ff6f61;
+  border: none;
+  color: #fff;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  display: block;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #e65a50;
+  transform: scale(1.05);
+}
+
+/* Additional styles for better aesthetics */
+h1, h2 {
+  font-family: 'Playfair Display', serif;
+}
+
+.lead, .instructions, .instructions-list {
+  font-family: 'Lato', sans-serif; /* Use Lato for descriptions */
+}
+
+/* Importing the Lato font */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');

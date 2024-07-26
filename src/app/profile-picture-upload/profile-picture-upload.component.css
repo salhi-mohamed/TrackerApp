@@ -1,0 +1,75 @@
+/* profile-picture-upload.component.css */
+
+/* Assurez-vous d'importer Bootstrap dans votre Angular projet */
+@import url('https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
+
+/* Background Gradient */
+body {
+  background: linear-gradient(135deg, #ba9c7e 0%, #ffffff 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+.upload-container {
+  margin-top: 50px;
+}
+
+.card {
+  border: none;
+  border-radius: 15px;
+  background: linear-gradient(145deg, #f3f3f3, #e2e2e2);
+  box-shadow: 5px 5px 15px #ccc, -5px -5px 15px #fff;
+}
+
+.card-body {
+  padding: 40px;
+}
+
+.card-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+.btn-success {
+  background-color: #28a745;
+  border-color: #28a745;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+.btn-outline-primary {
+  color: #007bff;
+  border-color: #007bff;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+.image-preview {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.preview-image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #007bff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

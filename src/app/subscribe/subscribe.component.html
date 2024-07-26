@@ -1,0 +1,60 @@
+<!-- src/app/subscribe/subscribe.component.html -->
+<app-navbar></app-navbar>
+<div class="signup-container">
+  <div class="signup-card">
+    <h1><i class="fas fa-user-plus"></i> Sign Up</h1>
+    <form #userform="ngForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="first-name"><i class="fas fa-user"></i> First Name</label>
+        <input id="first-name" name="firstName" type="text" placeholder="Enter first name" aria-label="First Name" [(ngModel)]="firstname" required />
+      </div>
+      <div class="form-group">
+        <label for="last-name"><i class="fas fa-user"></i> Last Name</label>
+        <input id="last-name" name="lastName" type="text" placeholder="Enter last name" aria-label="Last Name" [(ngModel)]="lastname" required />
+      </div>
+      <div class="form-group">
+        <label for="email"><i class="fas fa-envelope"></i> Email</label>
+        <input id="email" name="email" type="email" placeholder="Enter email" aria-label="Email" [(ngModel)]="email" required />
+      </div>
+      <div class="form-group">
+        <label for="password"><i class="fas fa-lock"></i> Password</label>
+        <input id="password" name="password" type="password" placeholder="Enter password" aria-label="Password" [(ngModel)]="password" required />
+      </div>
+      <div class="form-group">
+        <label for="confirm-password"><i class="fas fa-lock"></i> Confirm Password</label>
+        <input id="confirm-password" name="confirmPassword" type="password" placeholder="Confirm password" aria-label="Confirm Password" [(ngModel)]="confirmPassword" required />
+      </div>
+      <div class="form-group">
+        <label for="dob"><i class="fas fa-calendar-alt"></i> Date of Birth</label>
+        <input id="dob" name="dob" type="date" placeholder="Enter date of birth" aria-label="Date of Birth" [(ngModel)]="dob" required />
+      </div>
+      <div class="form-group">
+        <label for="country"><i class="fas fa-globe"></i> Country</label>
+        <select id="country" name="country" aria-label="Country" [(ngModel)]="country" required>
+          <option value="" disabled selected>Select your country</option>
+          <option value="USA">USA</option>
+          <option value="Canada">Canada</option>
+          <option value="France">France</option>
+          <!-- Add other countries here -->
+        </select>
+      </div>
+      <button type="submit" class="btn-submit"><i class="fas fa-user-plus"></i> Sign Up</button>
+      <p class="login-link">Already have an account? <a routerLink="/login">Login</a></p>
+    </form>
+  </div>
+</div>
+<app-footer></app-footer>
+
+<!-- Preview Modal -->
+<div class="modal" *ngIf="showModal">
+  <div class="modal-content">
+    <h2>Preview Your Information</h2>
+    <p><strong>First Name:</strong> {{ firstname }}</p>
+    <p><strong>Last Name:</strong> {{ lastname }}</p>
+    <p><strong>Email:</strong> {{ email }}</p>
+    <p><strong>Date of Birth:</strong> {{ dob }}</p>
+    <p><strong>Country:</strong> {{ country }}</p>
+    <button (click)="confirmSubmit()">Confirm</button>
+    <button (click)="showModal = false">Cancel</button>
+  </div>
+</div>

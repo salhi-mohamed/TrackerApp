@@ -1,0 +1,169 @@
+<!-- src/app/home/home.component.html -->
+<app-navbar></app-navbar>
+
+<div class="container-fluid home-container">
+  <section class="hero-section text-center">
+    <div class="row hero-content align-items-center">
+      <div class="col-md-6">
+        <h1>Bienvenue dans l'Application de Gestion des Objectifs et Productivité</h1>
+        <p class="lead">Créez, suivez et atteignez vos objectifs personnels et professionnels.</p>
+        <button class="btn btn-primary mt-3" (click)="navigate('/about')">Qui sommes-nous ?</button>
+      </div>
+      <div class="col-md-6">
+        <img src="https://images.pexels.com/photos/4065876/pexels-photo-4065876.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Productivity" class="img-fluid rounded-image">
+      </div>
+    </div>
+  </section>
+
+  <section class="features-section py-5">
+    <div class="container">
+      <h2 class="text-center mb-5"><i class="fas fa-tasks"></i> Fonctionnalités</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4 feature-card-container">
+          <div class="feature-card" (click)="navigate('objectives')">
+            <img src="https://media.istockphoto.com/id/1464264389/fr/photo/dart-board-arrow-atteignez-la-cible-%C3%A0-partir-de-12.webp?b=1&s=170667a&w=0&k=20&c=EJp_EDtHyYHKPQNtwY7c1h8308x7QdVu41SqnBJ-Y8E=" class="card-img-top" alt="Définir des Objectifs">
+            <div class="card-body">
+              <h5 class="card-title"><i class="fas fa-bullseye"></i> Définir des Objectifs</h5>
+            </div>
+          </div>
+          <div class="feature-details" [ngClass]="{'show-details': showObjectivesDetails}">
+            <div class="details-card">
+              <p>Définissez des objectifs clairs et réalisables pour orienter vos efforts.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4 feature-card-container">
+          <div class="feature-card" (click)="navigate('task-form')">
+            <img src="https://plus.unsplash.com/premium_photo-1683309568772-57011d6c1b7b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dGFza3N8ZW58MHx8MHx8fDA%3D" class="card-img-top" alt="Créer des Listes de Tâches">
+            <div class="card-body">
+              <h5 class="card-title"><i class="fas fa-list-alt"></i> Créer des Listes de Tâches</h5>
+            </div>
+          </div>
+          <div class="feature-details" [ngClass]="{'show-details': showTaskFormDetails}">
+            <div class="details-card">
+              <p>Organisez vos tâches quotidiennes pour une gestion efficace du temps.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4 feature-card-container">
+          <div class="feature-card" (click)="navigate('manage-time')">
+            <img src="https://media.istockphoto.com/id/1095040418/fr/photo/concept-de-planification-de-gestion-de-temps-vue-de-dessus.webp?b=1&s=170667a&w=0&k=20&c=5jnbDOl8nU02McL6tUMlbKKfZyBFGXHcschM6-6JRGg=" class="card-img-top" alt="Gérer le Temps">
+            <div class="card-body">
+              <h5 class="card-title"><i class="fas fa-clock"></i> Gérer votre Temps avec calendrier</h5>
+            </div>
+          </div>
+          <div class="feature-details" [ngClass]="{'show-details': showManageTimeDetails}">
+            <div class="details-card">
+              <p>Optimisez votre emploi du temps pour une productivité maximale.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center">
+        <button class="btn btn-outline-primary mt-3" (click)="toggleAllDetails()">Show details</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="how-it-works-section py-5">
+    <div class="container">
+      <h2 class="text-center mb-5"><i class="fas fa-cogs"></i> Comment ça Marche?</h2>
+      <div class="row text-center">
+        <div class="col-md-4 mb-4">
+          <div class="how-it-works-card">
+            <img src="https://media.istockphoto.com/id/1464264389/fr/photo/dart-board-arrow-atteignez-la-cible-%C3%A0-partir-de-12.webp?b=1&s=170667a&w=0&k=20&c=EJp_EDtHyYHKPQNtwY7c1h8308x7QdVu41SqnBJ-Y8E=" class="card-img-top" alt="Step 1">
+            <div class="card-body">
+              <h5 class="card-title"><i class="fas fa-bullseye"></i> Étape 1: Définir vos Objectifs</h5>
+              <p class="card-text">Commencez par définir des objectifs clairs et réalisables.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="how-it-works-card">
+            <img src="https://plus.unsplash.com/premium_photo-1682309580199-12b830e35008?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8cHJvZ3Jlc3N8ZW58MHx8MHx8fDA%3D" class="card-img-top" alt="Step 2">
+            <div class="card-body">
+              <h5 class="card-title"><i class="fas fa-tasks"></i> Étape 2: Suivre vos Progrès</h5>
+              <p class="card-text">Utilisez des outils de suivi pour monitorer votre avancement.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="how-it-works-card">
+            <img src="https://media.istockphoto.com/id/1362181407/fr/photo/concept-de-travail-d%C3%A9quipe-et-de-gestion-des-ressources-humaines.webp?b=1&s=170667a&w=0&k=20&c=OkBQNkJDtJCSnMHTkw0EztzaPfYuDtwSiu7goRp6lbw=" class="card-img-top" alt="Step 3">
+            <div class="card-body">
+              <h5 class="card-title"><i class="fas fa-trophy"></i> Étape 3: Atteindre vos Objectifs</h5>
+              <p class="card-text">Atteignez vos objectifs grâce à une organisation optimale.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="latest-news-section py-5">
+    <div class="container">
+      <h2 class="text-center mb-5"><i class="fas fa-newspaper"></i> Dernières Nouvelles</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="news-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLaruztZ2SnbO6tQx6rI1E2j0hrCm-gjWAug&s" class="card-img-top" alt="News 1">
+            <div class="card-body">
+              <h5 class="card-title"><i class="fas fa-calendar-alt"></i> Nouvelle Fonctionnalité: Intégration avec Google Calendar</h5>
+              <p class="card-text">Découvrez comment synchroniser vos objectifs avec Google Calendar.</p>
+              <button class="btn btn-outline-secondary" (click)="navigate('/google-calendar')">Lire Plus</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="news-card">
+            <img src="https://t3.ftcdn.net/jpg/02/93/37/28/360_F_293372811_2gpgNsJ3TQSPsfAbmBPIYfuKfAw70bpt.jpg" class="card-img-top" alt="News 2">
+            <div class="card-body">
+              <h5 class="card-title"><i class="fas fa-sync-alt"></i> Mise à Jour: Nouvelle Interface Utilisateur</h5>
+              <p class="card-text">Nous avons amélioré notre interface pour une meilleure expérience utilisateur.</p>
+              <button class="btn btn-outline-secondary" (click)="navigate('/news-interface')">Lire Plus</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="news-card">
+            <img src="https://st2.depositphotos.com/36569202/42157/i/450/depositphotos_421574282-stock-photo-book-word-guide-beautiful-wooden.jpg" class="card-img-top" alt="News 3">
+            <div class="card-body">
+              <h5 class="card-title"><i class="fas fa-lightbulb"></i> Guide: Comment Définir des Objectifs Efficaces</h5>
+              <p class="card-text">Apprenez les meilleures pratiques pour bien définir et atteindre vos objectifs sans perdre du temps.</p>
+              <button class="btn btn-outline-secondary" (click)="navigate('/news-define-obj')">Lire Plus</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tips-section py-5 text-center">
+    <div class="container">
+      <h2><i class="fas fa-lightbulb"></i> Conseils et Astuces</h2>
+      <p>Maximisez votre productivité avec ces conseils utiles.</p>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="tip-card">
+            <h5><i class="fas fa-list-ul"></i> Astuce 1: Utilisez les Listes de Tâches</h5>
+            <p>Organisez vos tâches quotidiennes et hebdomadaires pour une meilleure gestion du temps.</p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="tip-card">
+            <h5><i class="fas fa-bullseye"></i> Astuce 2: Fixez des Objectifs Réalistes</h5>
+            <p>Définissez des objectifs SMART (Spécifiques, Mesurables, Atteignables, Réalistes, et Temporellement définis).</p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="tip-card">
+            <h5><i class="fas fa-chart-line"></i> Astuce 3: Suivez vos Progrès</h5>
+            <p>Utilisez des graphiques et des statistiques pour visualiser vos progrès et ajuster vos stratégies si nécessaire.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<app-footer></app-footer>

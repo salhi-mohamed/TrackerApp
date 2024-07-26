@@ -1,0 +1,55 @@
+html, body {
+    height: 100%;
+  }
+  
+  .container {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  
+  .card {
+    border-radius: 15px;
+  }
+  
+  .card-header {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-color: #232222; /* Changed to black */
+  }
+  
+  .card-body {
+    padding: 2rem;
+  }
+  
+  .btn-primary {
+    background-color: #232222; /* Changed to black */
+    border: none;
+    font-size: 1.2rem;
+    padding: 0.75rem 1.25rem;
+  }
+  
+  .btn-primary:hover {
+    background-color: #79717189; /* Changed to black */
+  }
+ 
+  
+  .app-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #f8f9fa;
+    padding: 10px 0;
+    border-top: 1px solid #eaeaea;
+  }
+  
+  .input-group-text {
+    background-color: #232222; /* Changed to black */
+    border: none;
+    color: #fff;
+  }
+  
+  .input-group-text i {
+    font-size: 1.2rem;
+  }
+  

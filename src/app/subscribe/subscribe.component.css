@@ -1,0 +1,220 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f9fa; /* Light background color */
+}
+
+/* Navbar CSS */
+.navbar {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 3;
+  padding: 15px 0; /* Increased padding for better spacing */
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links a {
+  margin-right: 20px;
+  font-size: 18px;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  padding-bottom: 5px;
+  border-bottom: 2px solid transparent;
+}
+
+.nav-links a:hover {
+  color: #4d4a50;
+  border-bottom: 2px solid #4d4a50;
+}
+
+.logo a {
+  font-size: 28px;
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: 'Playfair Display', serif;
+}
+
+/* Signup Container */
+.signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  background: url('https://plus.unsplash.com/premium_photo-1661479545978-0d4c7054d679?q=80&w=2060&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
+  position: relative;
+  padding-top: 100px; /* Ajoutez ce padding pour compenser la hauteur de la navbar */
+}
+
+.signup-container::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6));
+  z-index: 1;
+}
+
+.signup-card {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 60px; /* Adjusted padding */
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 700px; /* Adjusted max-width */
+  width: 90%;
+  margin: 0 20px; /* Add margin for better presentation */
+  z-index: 2;
+  box-sizing: border-box;
+}
+
+.signup-card h1 {
+  margin-bottom: 30px;
+  color: #4d4a50; /* Harmonious color */
+  font-family: 'Playfair Display', serif;
+  font-size: 40px; /* Adjusted font-size */
+}
+
+.form-group {
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  font-size: 18px; /* Adjusted font-size */
+  margin-bottom: 10px;
+}
+
+.form-group input, .form-group select {
+  width: calc(100% - 24px);
+  padding: 12px; /* Adjusted padding */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 18px; /* Adjusted font-size */
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus, .form-group select:focus {
+  border-color: #4d4a50;
+}
+
+.btn-submit {
+  display: inline-block;
+  padding: 14px 50px; /* Increased padding */
+  font-size: 20px; /* Increased font-size */
+  color: white;
+  background: linear-gradient(90deg, #4d4a50, #6a7383);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.btn-submit:hover {
+  background: linear-gradient(90deg, #7b8492, #988da4e7);
+  transform: translateY(-2px); /* Slightly lift the button on hover */
+}
+
+.login-link {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #808080; /* Set to gray */
+}
+
+.login-link a {
+  color: #605e5e; /* Set to gray */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+  color: #4d4a50; /* Harmonious color */
+}
+
+@media (max-width: 768px) {
+  .signup-card {
+    padding: 40px; /* Adjusted padding for smaller screens */
+  }
+
+  .form-group input, .form-group select {
+    font-size: 16px; /* Adjusted font-size for smaller screens */
+    padding: 10px; /* Adjusted padding for smaller screens */
+  }
+
+  .btn-submit {
+    padding: 12px 40px; /* Adjusted padding for smaller screens */
+    font-size: 18px; /* Adjusted font-size for smaller screens */
+  }
+
+  .login-link {
+    font-size: 16px;
+  }
+}
+
+.signup-link a {
+  text-decoration: none;
+  color: #59565c;
+}
+/* Modal Styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.modal-content h2 {
+  margin-bottom: 20px;
+}
+
+.modal-content p {
+  margin: 10px 0;
+}
+
+.modal-content button {
+  margin: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background: #4d4a50;
+  color: white;
+  cursor: pointer;
+}
+
+.modal-content button:hover {
+  background: #6a7383;
+}

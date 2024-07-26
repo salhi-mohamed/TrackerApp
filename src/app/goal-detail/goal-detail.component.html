@@ -1,0 +1,24 @@
+<app-navbar></app-navbar>
+
+<div class="content-wrapper d-flex flex-column min-vh-100 pt-5">
+  <div class="container flex-grow-1" *ngIf="goal">
+    <div class="card mb-4">
+      <div class="card-header">
+        <h2 class="card-title">{{ goal.title }}</h2>
+      </div>
+      <div class="card-body">
+        <p class="card-text">{{ goal.description }}</p>
+        <p class="card-text"><strong>Catégorie:</strong> {{ goal.category }}</p>
+        <p class="card-text"><strong>Priorité:</strong> {{ goal.priority }}</p>
+        <p class="card-text"><strong>Statut:</strong> {{ goal.status }}</p>
+        <p class="card-text"><strong>Date de début:</strong> {{ goal.startDate | date }}</p>
+        <p class="card-text"><strong>Date de fin:</strong> {{ goal.endDate | date }}</p>
+        <p class="card-text"><strong>Tags:</strong> {{ goal.tags }}</p>
+        <div class="mt-4">
+          <canvas id="progressChart"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+  <app-footer class="mt-auto"></app-footer>
+</div>

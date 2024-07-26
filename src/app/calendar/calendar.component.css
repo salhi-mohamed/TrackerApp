@@ -1,0 +1,213 @@
+/* General style for the container */
+.container {
+  max-width: 900px;
+  margin-top: 20px;
+}
+
+/* Background wrapper */
+.background-wrapper {
+  background: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDR8fGRlc2t8ZW58MHx8fHwxNjE5Njk3NDYx&ixlib=rb-1.2.1&q=80&w=1080') no-repeat center center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh; /* Ensure it covers the full viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Style for the title container */
+.title-container {
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.8); /* Slightly transparent background */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the main title */
+.main-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #000000;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  margin: 0;
+  position: relative;
+}
+
+.main-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #000000;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* Style for the cards */
+.card {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+/* Style for the form in the card */
+.form-row {
+  align-items: center;
+}
+
+.form-row .col-md-4,
+.form-row .col-md-3,
+.form-row .col-md-2 {
+  margin-bottom: 10px;
+}
+
+.form-control {
+  border-radius: 5px;
+}
+
+/* Style for the Add button */
+.btn-success {
+  width: 100%;
+  cursor: pointer; /* Add cursor pointer */
+}
+
+/* Hover effect for the Add button */
+.btn-success:hover {
+  background-color: rgb(142, 215, 142);
+  cursor: pointer; /* Ensure the cursor is a pointer on hover */
+}
+
+/* Style for the calendar */
+.full-calendar {
+  background-color: rgba(255, 255, 255, 0.8); /* Make the background transparent */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Style for the events in the calendar */
+.fc-event {
+  border: none;
+  border-radius: 4px;
+  padding: 2px 5px;
+  color: #fff;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fc-event::before {
+  content: '📅'; /* Add an icon before the event title */
+  margin-right: 5px;
+}
+
+/* Style for the day numbers */
+.fc-daygrid-day-number {
+  color: #007bff;
+  font-weight: bold;
+}
+
+/* Style for the current day */
+.fc-day-today {
+  background-color: rgba(0, 123, 255, 0.1) !important;
+}
+
+/* Style for the modal header */
+.modal-header {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.modal-header .close {
+  color: #fff;
+}
+
+/* Style for error messages */
+.text-danger {
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+/* Add margin around form fields */
+.form-group {
+  margin-bottom: 15px;
+}
+
+/* Style for buttons in the modal */
+.modal-footer .btn {
+  width: 100px;
+}
+
+.btn:hover {
+  background-color: rgb(142, 215, 142);
+}
+
+/* Footer styling */
+footer {
+  padding: 50px 0;
+  background-color: #212529;
+  color: #fff;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.footer-heading {
+  font-size: 2rem; /* Increased font size */
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+.footer-text {
+  font-size: 1.5rem; /* Increased font size */
+}
+
+.footer-links {
+  font-size: 1.5rem; /* Increased font size */
+  list-style: none;
+  padding: 0;
+}
+
+.footer-link {
+  color: #adb5bd;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.footer-link:hover {
+  color: #fff;
+  transform: translateX(5px);
+}
+
+.footer-link i {
+  margin-right: 10px;
+}
+
+.social-links a {
+  font-size: 2rem; /* Increased font size */
+  transition: transform 0.3s ease-in-out;
+}
+
+.social-links a:hover {
+  transform: scale(1.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-heading {
+      font-size: 1.8rem; /* Increased font size */
+  }
+  .footer-text {
+      font-size: 1.2rem; /* Increased font size */
+  }
+  .footer-link {
+      font-size: 1.2rem; /* Increased font size */
+  }
+  .social-links a {
+      font-size: 1.8rem; /* Increased font size */
+  }
+}

@@ -1,0 +1,37 @@
+<nav class="navbar">
+  <div class="wrapper">
+    
+    <input type="radio" name="slider" id="menu-btn">
+    <input type="radio" name="slider" id="close-btn">
+    <ul class="nav-links">
+      <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
+      <li><a routerLink="/home">Home</a></li>
+      <li><a routerLink="/about">About</a></li>
+      <li>
+        <a href="#" class="desktop-item">Dropdown Menu</a>
+        <input type="checkbox" id="showDrop">
+        <label for="showDrop" class="mobile-item">Dropdown Menu</label>
+        <ul class="drop-menu">
+          <li><a (click)="navigateOrLogin('/list-obj')" class="dropdown-link">List of Objectives</a></li>
+          <li><a (click)="navigateOrLogin('/task-list')" class="dropdown-link">List of Tasks</a></li>
+          <li><a (click)="navigateOrLogin('/notifications')" class="dropdown-link">Notifications</a></li>
+          <li><a (click)="navigateOrLogin('/resources-help')" class="dropdown-link">Resources and Help</a></li>
+        </ul>
+      </li>
+      <li><a routerLink="/contact">Contact</a></li>
+      <li class="profile-menu" *ngIf="isLoggedIn">
+        <i class="fas fa-user profile-icon"></i>
+        <input type="checkbox" id="showProfileMenu">
+        <label for="showProfileMenu" class="mobile-item"></label>
+        <ul class="profile-drop-menu">
+          <li><a routerLink="/viewProfile">View Profile</a></li>
+          <li><a (click)="authService.logout()">Logout</a></li>
+        </ul>
+      </li>
+      <li *ngIf="!isLoggedIn">
+        <a routerLink="/login"><i class="fas fa-sign-in-alt"></i></a>
+      </li>
+    </ul>
+    <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
+  </div>
+</nav>

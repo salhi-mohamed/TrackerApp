@@ -1,0 +1,97 @@
+<!-- src/app/calendar/calendar.component.html -->
+<app-navbar></app-navbar>
+<div class="background-wrapper">
+  <div class="container mt-5">
+    <div class="title-container">
+      <h2 class="main-title">Calendrier Interactif</h2>
+    </div>
+
+    <!-- Formulaire d'ajout d'événements -->
+    <div class="card mb-4">
+      <div class="card-body">
+        <form [formGroup]="eventForm" (ngSubmit)="addEvent()">
+          <div class="form-row align-items-center">
+            <div class="col-md-4 mb-3">
+              <input type="text" class="form-control" placeholder="Titre de l'événement" formControlName="eventTitle">
+              <div *ngIf="eventForm.controls['eventTitle'].invalid && (eventForm.controls['eventTitle'].dirty || eventForm.controls['eventTitle'].touched)" class="text-danger">
+                Le titre de l'événement est requis.
+              </div>
+            </div>
+            <div class="col-md-3 mb-3">
+              <input type="date" class="form-control" formControlName="eventDate">
+              <div *ngIf="eventForm.controls['eventDate'].invalid && (eventForm.controls['eventDate'].dirty || eventForm.controls['eventDate'].touched)" class="text-danger">
+                La date de l'événement est requise.
+              </div>
+            </div>
+            <div class="col-md-3 mb-3">
+              <select class="form-control" formControlName="eventCategory">
+                <option value="" disabled selected>Sélectionnez une catégorie</option>
+                <option value="work">Travail</option>
+                <option value="personal">Personnel</option>
+                <option value="other">Autre</option>
+              </select>
+              <div *ngIf="eventForm.controls['eventCategory'].invalid && (eventForm.controls['eventCategory'].dirty || eventForm.controls['eventCategory'].touched)" class="text-danger">
+                La catégorie de l'événement est requise.
+              </div>
+            </div>
+            <div class="col-md-2 mb-3">
+              <button class="btn btn-success w-100" type="submit" [disabled]="eventForm.invalid">Ajouter</button>
+            </div>
+          </div>
+        </form>
+        <!-- Ajouter un bouton pour afficher les événements -->
+        <button class="btn btn-primary mt-3" (click)="navigateToEvents()">Afficher les Événements</button>
+        <!-- Ajouter un bouton pour utiliser Google Calendar -->
+      </div>
+    </div>
+
+    <!-- Calendrier -->
+    <div class="card full-calendar">
+      <div class="card-body p-3">
+        <full-calendar #calendar [options]="calendarOptions"></full-calendar>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>
+
+<!-- Modal Template -->
+<ng-template #modalContent let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Ajouter un événement</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form [formGroup]="eventForm" (ngSubmit)="addEvent()">
+      <div class="form-group">
+        <label for="eventTitle">Titre de l'événement</label>
+        <input type="text" class="form-control" id="eventTitle" formControlName="eventTitle">
+        <div *ngIf="eventForm.controls['eventTitle'].invalid && (eventForm.controls['eventTitle'].dirty || eventForm.controls['eventTitle'].touched)" class="text-danger">
+          Le titre de l'événement est requis.
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="eventDate">Date de l'événement</label>
+        <input type="date" class="form-control" id="eventDate" formControlName="eventDate">
+        <div *ngIf="eventForm.controls['eventDate'].invalid && (eventForm.controls['eventDate'].dirty || eventForm.controls['eventDate'].touched)" class="text-danger">
+          La date de l'événement est requise.
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="eventCategory">Catégorie de l'événement</label>
+        <select class="form-control" id="eventCategory" formControlName="eventCategory">
+          <option value="" disabled selected>Sélectionnez une catégorie</option>
+          <option value="work">Travail</option>
+          <option value="personal">Personnel</option>
+          <option value="other">Autre</option>
+        </select>
+        <div *ngIf="eventForm.controls['eventCategory'].invalid && (eventForm.controls['eventCategory'].dirty || eventForm.controls['eventCategory'].touched)" class="text-danger">
+          La catégorie de l'événement est requise.
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary" [disabled]="eventForm.invalid">Ajouter</button>
+    </form>
+  </div>
+</ng-template>

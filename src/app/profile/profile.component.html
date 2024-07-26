@@ -1,0 +1,44 @@
+<app-navbar></app-navbar>
+<div class="background-wrapper">
+  <div class="container d-flex flex-column min-vh-100 justify-content-center align-items-center">
+    <div class="profile-container card shadow-lg p-4 mb-4">
+      <div class="card-body">
+        <h1 class="card-title mb-4 display-4 text-center">Profile Information</h1>
+        <div class="profile-card">
+          <div class="row">
+            <div class="col-md-4 text-center position-relative">
+              <input type="file" #fileInput style="display: none;" (change)="onFileSelected($event)">
+              <img [src]="user?.profileImageUrl" alt="Profile Image" class="profile-image img-thumbnail mb-3" (click)="fileInput.click()" *ngIf="user?.profileImageUrl">
+              <i class="fas fa-camera change-photo-icon" (click)="fileInput.click()"></i>
+            </div>
+            <div class="col-md-8 d-flex flex-column justify-content-center">
+              <div class="row text-left justify-content-center">
+                <div class="col-12 mb-3">
+                  <i class="fas fa-user fa-fw mr-2"></i><strong>First Name:</strong> {{ user?.firstName }}
+                </div>
+                <div class="col-12 mb-3">
+                  <i class="fas fa-user fa-fw mr-2"></i><strong>Last Name:</strong> {{ user?.lastName }}
+                </div>
+                <div class="col-12 mb-3">
+                  <i class="fas fa-envelope fa-fw mr-2"></i><strong>Email:</strong> {{ user?.email }}
+                </div>
+                <div class="col-12 mb-3">
+                  <i class="fas fa-calendar-alt fa-fw mr-2"></i><strong>Date of Birth:</strong> {{ user?.dob }}
+                </div>
+                <div class="col-12 mb-3">
+                  <i class="fas fa-globe fa-fw mr-2"></i><strong>Country:</strong> {{ user?.country }}
+                </div>
+              </div>
+              <div class="text-center mt-4">
+                <button class="btn btn-primary" (click)="editProfile()">
+                  <i class="fas fa-edit"></i> Edit Profile
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer class="mt-auto"></app-footer>

@@ -1,0 +1,64 @@
+<app-navbar></app-navbar>
+<div class="container d-flex flex-column min-vh-100 justify-content-center">
+  <div class="row justify-content-center">
+    <div class="col-md-10 col-lg-8">
+      <div class="card shadow-lg border-0">
+        <div class="card-header bg-dark text-white text-center py-4">
+          <h2 class="h4 mb-0">Edit Profile</h2>
+        </div>
+        <div class="card-body p-4">
+          <form (ngSubmit)="saveProfile()">
+            <div class="form-group">
+              <label for="firstName">First Name</label>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="fas fa-user"></i></span>
+                </div>
+                <input type="text" id="firstName" [(ngModel)]="user.firstName" name="firstName" class="form-control" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="lastName">Last Name</label>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="fas fa-user"></i></span>
+                </div>
+                <input type="text" id="lastName" [(ngModel)]="user.lastName" name="lastName" class="form-control" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                </div>
+                <input type="email" id="email" [(ngModel)]="user.email" name="email" class="form-control" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="dob">Date of Birth</label>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="fas fa-calendar-alt"></i></span>
+                </div>
+                <input type="date" id="dob" [(ngModel)]="user.dob" name="dob" class="form-control" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="country">Country</label>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="fas fa-globe"></i></span>
+                </div>
+                <input type="text" id="country" [(ngModel)]="user.country" name="country" class="form-control" required>
+              </div>
+            </div>
+           
+            <button type="submit" class="btn btn-primary w-100 mt-4" (click)="saveProfile()">Save</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

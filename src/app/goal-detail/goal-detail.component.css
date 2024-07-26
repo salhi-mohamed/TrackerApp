@@ -1,0 +1,15 @@
+/* Adjust navbar styles */
+app-navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #fff; /* Ensure the background is solid to cover content beneath */
+    height: 56px; /* Adjust this value based on your navbar height */
+  }
+  
+  /* Ensure the main content takes into account the fixed navbar */
+  .content-wrapper {
+    padding-top: 56px; /* Adjust this value based on your navbar height */
+  }
+  
