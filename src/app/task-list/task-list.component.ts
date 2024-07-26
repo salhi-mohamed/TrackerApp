@@ -89,7 +89,6 @@ export class TaskListComponent implements OnInit {
   cancelEdit() {
     this.isEditing = false;
     this.taskBeingEdited = null;
-    console.log("hey")
   }
 
   calculateProgress(task: Task): number {

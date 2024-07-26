@@ -37,6 +37,12 @@ export class TaskService {
   }
 
   updateTask(task: Task): Observable<Task> {
-    return this.http.patch<Task>(`${this.apiUrl}modify/${task._id}`, task);
+    const url = `${this.apiUrl}modify/${task._id}`;
+    return this.http.patch<Task>(url, task).pipe(
+      catchError((error: HttpErrorResponse) => {
+        console.error('Update request error', error);
+        return throwError(error);
+      })
+    );
   }
 }
