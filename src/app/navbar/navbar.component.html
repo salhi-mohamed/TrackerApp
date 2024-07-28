@@ -4,17 +4,16 @@
     <input type="radio" name="slider" id="close-btn">
     <ul class="nav-links">
       <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
-      <li><a routerLink="/home">Home</a></li>
-      <li><a routerLink="/about">About</a></li>
+      <li><a routerLink="/home">Accueil</a></li>
+      <li><a routerLink="/about">À Propos</a></li>
       <li>
-        <a href="#" class="desktop-item">Dropdown Menu</a>
+        <a routerLink="/home" class="desktop-item">Services</a>
         <input type="checkbox" id="showDrop">
-        <label for="showDrop" class="mobile-item">Dropdown Menu</label>
+        <label for="showDrop" class="mobile-item">Menu déroulant</label>
         <ul class="drop-menu">
-          <li><a (click)="navigateOrLogin('/list-obj')" class="dropdown-link">List of Objectives</a></li>
-          <li><a (click)="navigateOrLogin('/task-list')" class="dropdown-link">List of Tasks</a></li>
-          <li><a (click)="navigateOrLogin('/notifications')" class="dropdown-link">Notifications</a></li>
-          <li><a (click)="navigateOrLogin('/resources-help')" class="dropdown-link">Resources and Help</a></li>
+          <li><a (click)="navigateOrLogin('/list-obj')" class="dropdown-link">Vos Objectifs</a></li>
+          <li><a (click)="navigateOrLogin('/task-list')" class="dropdown-link">Vos Tâches</a></li>
+          <li><a (click)="navigateOrLogin('/resources-help')" class="dropdown-link">Ressources et Aide</a></li>
         </ul>
       </li>
       <li><a routerLink="/contact">Contact</a></li>
@@ -23,8 +22,8 @@
         <input type="checkbox" id="showProfileMenu">
         <label for="showProfileMenu" class="mobile-item"></label>
         <ul class="profile-drop-menu">
-          <li><a routerLink="/viewProfile">View Profile</a></li>
-          <li><a (click)="authService.logout()">Logout</a></li>
+          <li><a routerLink="/viewProfile">Voir Profil</a></li>
+          <li><a (click)="authService.logout()">Déconnexion</a></li>
         </ul>
       </li>
       <li *ngIf="!isLoggedIn">
@@ -35,7 +34,7 @@
         <i class="fas fa-bell" (click)="toggleNotification()"></i>
         <div *ngIf="showNotification" class="notification-dropdown">
           <div class="notification-header">
-            <h4>Reminder</h4>
+            <h4>Rappel</h4>
             <button class="dismiss-btn" (click)="toggleNotification()">×</button>
           </div>
           <p (click)="navigateToTasks()" class="notification-message">{{ reminderMessage }}</p>

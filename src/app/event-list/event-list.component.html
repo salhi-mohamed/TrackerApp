@@ -8,7 +8,7 @@
 
       <div *ngIf="!hasEvents" class="no-events-container">
         <div class="no-events-card">
-          <p class="m-0">No events yet</p>
+          <p class="m-0">Aucun événement pour le moment</p>
         </div>
       </div>
 
@@ -17,7 +17,7 @@
           <div class="event-details">
             <h5 class="card-title">{{ event.title }}</h5>
             <p class="card-text">
-              <i class="bi bi-calendar-event"></i> Date: {{ event.date }}
+              <i class="bi bi-calendar-event"></i> Date : {{ event.date }}
             </p>
             <p class="card-text">
               <span class="badge" [ngClass]="getEventCategoryClass(event.color)">
@@ -25,7 +25,7 @@
               </span>
             </p>
             <p class="card-text">
-              <i class="bi bi-clock"></i> Temps restant: {{ event.timeLeft }}
+              <i class="bi bi-clock"></i> Temps restant : {{ event.timeLeft }}
             </p>
           </div>
           <button class="btn btn-danger" (click)="deleteEvent(event.id)">

@@ -15,13 +15,11 @@ import { SubscribeComponent } from './subscribe/subscribe.component';
 import { GoogleCalendarIntegrationComponent } from './google-calendar-integration/google-calendar-integration.component';
 import { InterfaceUpdateNewsComponent } from './interface-update-news/interface-update-news.component';
 import { NewsDefineObjComponent } from './news-define-obj/news-define-obj.component';
-import { SidebarComponent } from './sidebar/sidebar.component';
 import { ObjectivesComponent } from './objectives/objectives.component';
 import { ListObjectivesComponent } from './list-objectives/list-objectives.component';
 import { GoalDetailComponent } from './goal-detail/goal-detail.component';
 import { TaskFormComponent } from './task-form/task-form.component';
 import { TaskListComponent } from './task-list/task-list.component';
-import { SimpleDashboardComponent } from './simple-dashboard/simple-dashboard.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import { EventListComponent } from './event-list/event-list.component';
 import { ProfilePictureUploadComponent } from './profile-picture-upload/profile-picture-upload.component';
@@ -45,13 +43,11 @@ import { HttpClientModule } from '@angular/common/http';
     GoogleCalendarIntegrationComponent,
     InterfaceUpdateNewsComponent,
     NewsDefineObjComponent,
-    SidebarComponent,
     ObjectivesComponent,
     ListObjectivesComponent,
     GoalDetailComponent,
     TaskFormComponent,
     TaskListComponent,
-    SimpleDashboardComponent,
     CalendarComponent,
     EventListComponent,
     ProfilePictureUploadComponent,

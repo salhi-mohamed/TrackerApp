@@ -5,19 +5,19 @@
       <div class="col-md-8">
         <div class="card shadow-lg">
           <div class="card-body text-center">
-            <h2 class="card-title mb-4">Upload Profile Picture</h2>
+            <h2 class="card-title mb-4">Télécharger la Photo de Profil</h2>
             <div class="image-preview mb-4" *ngIf="imagePreview">
-              <img [src]="imagePreview" alt="Selected Image" class="rounded-circle img-thumbnail preview-image">
+              <img [src]="imagePreview" alt="Image Sélectionnée" class="rounded-circle img-thumbnail preview-image">
             </div>
             <form (ngSubmit)="onSubmit()">
               <div class="form-group mb-3">
                 <input type="file" class="form-control-file" (change)="onFileSelected($event)" accept="image/*" id="fileInput" hidden />
                 <label for="fileInput" class="btn btn-outline-primary mt-3">
-                  <i class="fas fa-upload"></i> Choose File
+                  <i class="fas fa-upload"></i> Choisir un Fichier
                 </label>
               </div>
               <button type="submit" class="btn btn-success" [disabled]="!selectedFile">
-                <i class="fas fa-cloud-upload-alt"></i> Upload
+                <i class="fas fa-cloud-upload-alt"></i> Télécharger
               </button>
             </form>
           </div>

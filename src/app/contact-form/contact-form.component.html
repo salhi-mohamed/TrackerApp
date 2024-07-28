@@ -7,7 +7,7 @@
     <div class="background-wrapper">
         <div class="container mt-5 page-content">
             <div class="text-center mb-4">
-                <h2 class="heading-section">Contact us</h2>
+                <h2 class="heading-section">Contactez nous</h2>
             </div>
             <div class="row justify-content-center">
                 <div class="col-md-12">
@@ -19,7 +19,7 @@
                                         <i class="fa fa-map-marker"></i>
                                     </div>
                                     <div class="text">
-                                        <p><span>Address:</span> 198 West 21th Street, Suite 721 New York NY 10016</p>
+                                        <p><span>Addresse:</span> Mohammed V , Tunis , Tunisia</p>
                                     </div>
                                 </div>
                             </div>
@@ -29,7 +29,7 @@
                                         <i class="fa fa-phone"></i>
                                     </div>
                                     <div class="text">
-                                        <p><span>Phone:</span> <a href="tel://1234567920">+ 1235 2355 98</a></p>
+                                        <p><span>Phone:</span> <a href="tel://1234567920">00000000</a></p>
                                     </div>
                                 </div>
                             </div>
@@ -39,7 +39,7 @@
                                         <i class="fa fa-paper-plane"></i>
                                     </div>
                                     <div class="text">
-                                        <p><span>Email:</span> <a href="mailto:info@yoursite.com">infooursite.com</a></p>
+                                        <p><span>Email:</span> <a href="mailto:info@yoursite.com">salhimedhoussem.gmail.com</a></p>
                                     </div>
                                 </div>
                             </div>
@@ -49,33 +49,33 @@
                                         <i class="fa fa-globe"></i>
                                     </div>
                                     <div class="text">
-                                        <p><span>Website:</span> <a href="#">yoursite.com</a></p>
+                                        <p><span>Website:</span> <a routerLink="/about"></a></p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="form-image-container">
                             <div class="contact-wrap w-100 p-md-5 p-4">
-                                <h3 class="mb-4">Contact Us</h3>
+                                <h3 class="mb-4">Contactez nous</h3>
                                 <div *ngIf="errorMessage" class="mb-4 text-danger">{{ errorMessage }}</div>
                                 <div *ngIf="successMessage" class="mb-4 text-success">{{ successMessage }}</div>
                                 <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <label class="label" for="name">Full Name</label>
+                                                <label class="label" for="name">Nom et prénom : </label>
                                                 <input type="text" class="form-control" formControlName="name" id="name" placeholder="Name">
                                                 <div *ngIf="formSubmitted && name.invalid" class="text-danger">
-                                                    Please enter your name
+                                                   Entrez votre nom 
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <label class="label" for="email">Email Address</label>
+                                                <label class="label" for="email">Adresse Email</label>
                                                 <input type="email" class="form-control" formControlName="email" id="email" placeholder="Email">
                                                 <div *ngIf="formSubmitted && email.invalid" class="text-danger">
-                                                    Please enter a valid email address
+                                                   Entrez une adresse valide
                                                 </div>
                                             </div>
                                         </div>
@@ -84,7 +84,7 @@
                                                 <label class="label" for="subject">Subject</label>
                                                 <input type="text" class="form-control" formControlName="subject" id="subject" placeholder="Subject">
                                                 <div *ngIf="formSubmitted && subject.invalid" class="text-danger">
-                                                    Please enter your subject
+                                                   Entrez votre sujet 
                                                 </div>
                                             </div>
                                         </div>
@@ -93,13 +93,13 @@
                                                 <label class="label" for="message">Message</label>
                                                 <textarea name="message" class="form-control" formControlName="message" id="message" cols="30" rows="4" placeholder="Message"></textarea>
                                                 <div *ngIf="formSubmitted && message.invalid" class="text-danger">
-                                                    Please enter a message (at least 5 characters)
+                                                   Entrez votre message (au moins  5 caractères)
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <button type="submit" class="btn btn-primary">Send Message</button>
+                                                <button type="submit" class="btn btn-primary">Envoyez</button>
                                                 <div class="submitting" *ngIf="formSubmitted && contactForm.valid">Submitting...</div>
                                             </div>
                                         </div>
@@ -113,66 +113,65 @@
                 </div>
             </div>
 
-            <!-- Services Section -->
-            <div class="services-section">
-                <h2>Our Services</h2>
-                <div class="services-container">
-                    <div class="service-item">
-                        <div class="icon"><i class="fa fa-cogs"></i></div>
-                        <h4>Service One</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac ultricies magna.</p>
-                    </div>
-                    <div class="service-item">
-                        <div class="icon"><i class="fa fa-laptop"></i></div>
-                        <h4>Service Two</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac ultricies magna.</p>
-                    </div>
-                    <div class="service-item">
-                        <div class="icon"><i class="fa fa-bullhorn"></i></div>
-                        <h4>Service Three</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac ultricies magna.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- FAQ Section -->
-            <div class="faq-section">
-                <h2>Frequently Asked Questions</h2>
-                <div class="faq-container">
-                    <div class="faq-item">
-                        <h4>What is your response time?</h4>
-                        <p>We aim to respond to all queries within 24 hours.</p>
-                    </div>
-                    <div class="faq-item">
-                        <h4>Do you offer support?</h4>
-                        <p>Yes, we offer 24/7 support to all our customers.</p>
-                    </div>
-                    <div class="faq-item">
-                        <h4>How can I track my order?</h4>
-                        <p>You can track your order using the tracking number provided in your confirmation email.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Testimonials Section -->
-            <div class="testimonials-section">
-                <h2>What Our Clients Say</h2>
-                <div class="testimonials-container">
-                    <div class="testimonial-item">
-                        <p>"The best service I have ever used! Highly recommend to everyone."</p>
-                        <div class="author">- John Doe</div>
-                    </div>
-                    <div class="testimonial-item">
-                        <p>"Amazing support and quick response times. Five stars!"</p>
-                        <div class="author">- Jane Smith</div>
-                    </div>
-                    <div class="testimonial-item">
-                        <p>"Great experience from start to finish. Will use again!"</p>
-                        <div class="author">- Mike Johnson</div>
-                    </div>
-                </div>
-            </div>
+           <!-- Services Section -->
+<div class="services-section">
+    <h2>Nos services :</h2>
+    <div class="services-container">
+        <div class="service-item">
+            <div class="icon"><i class="fa fa-cogs"></i></div>
+            <h4>Gestion des Objectifs</h4>
+            <p>Fixez et suivez vos objectifs facilement pour atteindre vos buts.</p>
+        </div>
+        <div class="service-item">
+            <div class="icon"><i class="fa fa-laptop"></i></div>
+            <h4>Gestion des Tâches avec Rappel</h4>
+            <p>Organisez vos tâches quotidiennes et recevez des rappels pour ne rien oublier.</p>
+        </div>
+        <div class="service-item">
+            <div class="icon"><i class="fa fa-bullhorn"></i></div>
+            <h4>Gestion des Événements</h4>
+            <p>Planifiez et suivez tous vos événements importants en un seul endroit.</p>
         </div>
     </div>
-    <app-footer></app-footer>
+</div>
+
+<div class="faq-section">
+    <h2>Questions Fréquemment Posées</h2>
+    <div class="faq-container">
+        <div class="faq-item">
+            <h4>Quel est votre délai de réponse ?</h4>
+            <p>Nous visons à répondre à toutes les demandes dans les 24 heures.</p>
+        </div>
+        <div class="faq-item">
+            <h4>Offrez-vous un support ?</h4>
+            <p>Oui, nous offrons un support 24/7 à tous nos clients.</p>
+        </div>
+        <div class="faq-item">
+            <h4>Comment puis-je suivre ma commande ?</h4>
+            <p>Vous pouvez suivre votre commande en utilisant le numéro de suivi fourni dans votre email de confirmation.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Testimonials Section -->
+<div class="testimonials-section">
+    <h2>Ce que disent nos clients</h2>
+    <div class="testimonials-container">
+        <div class="testimonial-item">
+            <p>"Le meilleur service que j'ai jamais utilisé ! Je recommande vivement à tout le monde."</p>
+            <div class="author">- John Doe</div>
+        </div>
+        <div class="testimonial-item">
+            <p>"Support incroyable et temps de réponse rapide. Cinq étoiles !"</p>
+            <div class="author">- Jane Smith</div>
+        </div>
+        <div class="testimonial-item">
+            <p>"Une excellente expérience du début à la fin. Je vais utiliser à nouveau !"</p>
+            <div class="author">- Mike Johnson</div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+<app-footer></app-footer>
 </body>

@@ -34,7 +34,7 @@ export class NavbarComponent implements OnInit {
     this.wsService.messages.subscribe(message => {
       const data = JSON.parse(message.data);
       if (data.message) {
-        this.reminderMessage = `Your reminder for the task is here: ${data.message}`;
+        this.reminderMessage = `Rappel pour la tâche suivante : ${data.message}`;
         this.hasReminder = true;
       }
     });
