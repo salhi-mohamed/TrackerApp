@@ -58,4 +58,10 @@ export class NavbarComponent implements OnInit {
       this.hasReminder = false; // Reset notification state
     }
   }
+
+  navigateToTasks() {
+    this.router.navigate(['/task-list']);
+    this.showNotification = false; // Hide notification after navigation
+    this.hasReminder = false; // Reset notification state
+  }
 }
