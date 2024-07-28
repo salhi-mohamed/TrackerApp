@@ -407,31 +407,61 @@ nav input {
 }
 
 .reminder-icon i {
-  font-size: 24px;
-  color: #f00;
+  font-size: 32px; /* Increased size */
   cursor: pointer;
+  color: #fff; /* Default white color */
+  transition: color 0.3s ease;
 }
 
-.reminder-icon i:hover {
-  color: #c00;
+.reminder-icon.new-notification i {
+  color: #ff0; /* Yellow color when there's a notification */
 }
 
 .notification-dropdown {
   position: absolute;
-  top: 30px; /* Adjust based on your navbar height */
+  top: 40px; /* Adjust based on your navbar height */
   right: 0;
   background-color: #fff;
   color: #000;
-  padding: 10px;
+  padding: 15px 20px;
+  width: 300px;
   border: 1px solid #ccc;
   border-radius: 5px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   z-index: 100;
 }
 
+.notification-dropdown .notification-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+.notification-dropdown .notification-header h4 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.notification-dropdown .notification-header .dismiss-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #007bff;
+}
+
+.notification-dropdown .notification-header .dismiss-btn:hover {
+  color: #0056b3;
+}
+
 .notification-dropdown p {
   margin: 0;
   font-size: 14px;
+  line-height: 1.5;
 }
 
 .notification-dropdown button {
