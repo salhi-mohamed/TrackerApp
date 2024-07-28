@@ -1,6 +1,5 @@
 <nav class="navbar">
   <div class="wrapper">
-    
     <input type="radio" name="slider" id="menu-btn">
     <input type="radio" name="slider" id="close-btn">
     <ul class="nav-links">
@@ -30,6 +29,14 @@
       </li>
       <li *ngIf="!isLoggedIn">
         <a routerLink="/login"><i class="fas fa-sign-in-alt"></i></a>
+      </li>
+      <!-- Notification Icon -->
+      <li class="reminder-icon">
+        <i class="fas fa-bell" (click)="toggleNotification()"></i>
+        <div *ngIf="showNotification" class="notification-dropdown">
+          <p>{{ reminderMessage }}</p>
+          <button (click)="toggleNotification()">Dismiss</button>
+        </div>
       </li>
     </ul>
     <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>

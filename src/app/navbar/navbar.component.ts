@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../auth.service';
+import { WebSocketService } from '../websocket.service';
 
 @Component({
   selector: 'app-navbar',
@@ -9,9 +10,16 @@ import { AuthService } from '../auth.service';
 })
 export class NavbarComponent implements OnInit {
   isLoggedIn: boolean = false;
-  profileImageUrl:any ;
+  profileImageUrl: any;
+  hasReminder: boolean = false;
+  reminderMessage: string | null = null;
+  showNotification: boolean = false;
 
-  constructor(public authService: AuthService, private router: Router) {}
+  constructor(
+    public authService: AuthService,
+    private router: Router,
+    private wsService: WebSocketService
+  ) {}
 
   ngOnInit(): void {
     this.authService.isLoggedIn().subscribe((loggedIn: boolean) => {
@@ -22,6 +30,14 @@ export class NavbarComponent implements OnInit {
       this.profileImageUrl = url;
       console.log(this.profileImageUrl);
     });
+
+    this.wsService.messages.subscribe(message => {
+      const data = JSON.parse(message.data);
+      if (data.message) {
+        this.reminderMessage = data.message;
+        this.hasReminder = true;
+      }
+    });
   }
 
   navigateOrLogin(path: string): void {
@@ -31,8 +47,12 @@ export class NavbarComponent implements OnInit {
       this.router.navigate(['/login']);
     }
   }
-  GoToContact()
-  {
-    this.router.navigate(['/contact'])
+
+  GoToContact() {
+    this.router.navigate(['/contact']);
+  }
+
+  toggleNotification() {
+    this.showNotification = !this.showNotification;
   }
 }

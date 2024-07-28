@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { TaskService } from '../task-service.service';
 import { Task } from '../models/task.model';
 import { v4 as uuidv4 } from 'uuid'; // Import uuid
+import { reminderDateValidator } from '../validators/date-validator.validator'; // Import the custom validator
 
 @Component({
   selector: 'app-task-form',
@@ -28,8 +29,9 @@ export class TaskFormComponent implements OnInit {
       category: ['', Validators.required],
       tags: ['', Validators.required],
       reminderEnabled: [false],
-      reminder: ['']
-    });
+      reminder: [''],
+      reminded: [false] // Initialize reminded to false
+    }, { validators: reminderDateValidator('dueDate', 'reminder') });
   }
 
   addTask() {

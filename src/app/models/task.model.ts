@@ -9,4 +9,5 @@ export interface Task {
   tags: string;
   reminderEnabled: boolean;
   reminder: Date;
+  reminded: boolean; // Add this attribute
 }

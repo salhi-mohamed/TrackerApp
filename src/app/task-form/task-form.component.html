@@ -105,6 +105,9 @@
           <div *ngIf="taskForm.get('reminder')?.invalid && taskForm.get('reminder')?.touched" class="text-red-500 mt-1 text-sm italic">
             <i class="fas fa-exclamation-circle mr-1"></i>Rappel requis
           </div>
+          <div *ngIf="taskForm.errors?.['reminderAfterDueDate'] && taskForm.get('reminder')?.touched" class="text-red-500 mt-1 text-sm italic">
+            <i class="fas fa-exclamation-circle mr-1"></i>La date de rappel doit être avant ou égale à la date d'échéance
+          </div>
         </div>
       </div>
       <div>
