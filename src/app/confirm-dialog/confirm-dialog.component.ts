@@ -6,7 +6,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrls: ['./confirm-dialog.component.css']
 })
 export class ConfirmDialogComponent {
-  @Input() data: any; // Use any to accept any type of data
+  @Input() data: any; 
   @Output() close = new EventEmitter<boolean>();
 
   onNoClick(): void {

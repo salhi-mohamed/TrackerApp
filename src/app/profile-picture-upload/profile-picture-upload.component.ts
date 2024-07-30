@@ -14,7 +14,7 @@ export class ProfilePictureUploadComponent {
 
   constructor(
     private authService: AuthService,
-    private userService: UserService, // Inject UserService
+    private userService: UserService, 
     private router: Router
   ) {}
 

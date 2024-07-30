@@ -12,5 +12,4 @@ export class AboutUsComponent {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   }
-  // Any necessary TypeScript logic can go here
 }

@@ -1,13 +1,12 @@
-// src/app/event.service.ts
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 
 export interface Event {
   id: number;
   title: string;
-  date: string; // Assurez-vous que la date est sous forme de chaîne ISO 8601
+  date: string; 
   color: string;
-  timeLeft?: string; // Ajout de la propriété timeLeft optionnelle
+  timeLeft?: string; 
 }
 
 @Injectable({
@@ -15,7 +14,6 @@ export interface Event {
 })
 export class EventService {
   private eventsSubject = new BehaviorSubject<Event[]>([
-    // Exemple d'événements initiaux
   ]);
   events$ = this.eventsSubject.asObservable();
 

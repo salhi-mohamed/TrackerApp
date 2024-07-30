@@ -1,4 +1,3 @@
-// src/app/home/home.component.ts
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../auth.service';
@@ -9,7 +8,7 @@ import { AuthService } from '../auth.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
-  image: string = 'assets/definir-objectifs.jpg'; // Assuming you have an image path
+  image: string = 'assets/definir-objectifs.jpg';
 
   showObjectivesDetails: boolean = false;
   showTaskFormDetails: boolean = false;

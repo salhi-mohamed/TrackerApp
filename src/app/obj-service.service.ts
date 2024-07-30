@@ -6,7 +6,6 @@ import { Objective } from './models/objective.model';
 })
 export class ObjServiceService {
   objectives: Objective[] = [
-    // Ajoutez des objectifs d'exemple avec des identifiants uniques si nécessaire
   ];
 
   constructor() { }

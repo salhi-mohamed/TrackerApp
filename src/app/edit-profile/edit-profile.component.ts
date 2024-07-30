@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 })
 export class EditProfileComponent implements OnInit {
   user: any = {};
-  originalEmail: string = ''; // Initialize as an empty string
+  originalEmail: string = ''; 
 
   constructor(
     private userService: UserService,
@@ -24,7 +24,7 @@ export class EditProfileComponent implements OnInit {
     this.userService.getUser().subscribe(user => {
       if (user) {
         this.user = { ...user };
-        this.originalEmail = user.email || ''; // Ensure originalEmail is a string
+        this.originalEmail = user.email || ''; 
       }
     });
   }

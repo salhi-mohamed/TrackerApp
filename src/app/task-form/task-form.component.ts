@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { TaskService } from '../task-service.service';
 import { Task } from '../models/task.model';
-import { v4 as uuidv4 } from 'uuid'; // Import uuid
-import { reminderDateValidator } from '../validators/date-validator.validator'; // Import the custom validator
+import { v4 as uuidv4 } from 'uuid'; 
+import { reminderDateValidator } from '../validators/date-validator.validator'; 
 
 @Component({
   selector: 'app-task-form',

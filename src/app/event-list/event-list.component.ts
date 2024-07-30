@@ -19,10 +19,10 @@ export class EventListComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.eventService.events$.subscribe(events => {
       this.events = events;
-      this.hasEvents = events.length > 0; // Check if there are events
+      this.hasEvents = events.length > 0; 
     });
 
-    // Mettre à jour le temps restant toutes les secondes
+   
     this.subscription = interval(1000).subscribe(() => {
       this.updateTimeLeft();
     });

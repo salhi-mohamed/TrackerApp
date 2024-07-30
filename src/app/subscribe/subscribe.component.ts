@@ -23,7 +23,7 @@ export class SubscribeComponent {
   constructor(
     private router: Router,
     private checkLoginService: CheckLoginService,
-    private userService: UserService // Inject UserService
+    private userService: UserService 
   ) {}
 
   onSubmit() {
@@ -81,14 +81,14 @@ export class SubscribeComponent {
     this.checkLoginService.addUser(this.email, this.password);
     alert('Sign-up successful!');
 
-    // Enregistrer l'utilisateur dans UserService
+   
     this.userService.setUser({
       firstName: this.firstname,
       lastName: this.lastname,
       email: this.email,
       dob: this.dob,
       country: this.country,
-      profileImageUrl: 'default-profile-image-url' // Remplacez ceci par l'URL de l'image de profil si disponible
+      profileImageUrl: 'default-profile-image-url' 
     });
 
     this.showModal = false;

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { CheckLoginService } from '../check-login.service';
-import { AuthService } from '../auth.service'; // Import the AuthService
+import { AuthService } from '../auth.service'; 
 
 @Component({
   selector: 'app-login',
@@ -17,7 +17,7 @@ export class LoginComponent {
   constructor(
     private route: Router,
     private checkLoginService: CheckLoginService,
-    private authService: AuthService // Inject the AuthService
+    private authService: AuthService 
   ) {}
 
   onLogin() {

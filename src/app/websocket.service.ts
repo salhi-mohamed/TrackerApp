@@ -12,7 +12,7 @@ export class WebSocketService {
   }
 
   private createWebSocket(): Subject<MessageEvent> {
-    const ws = new WebSocket('ws://localhost:8080'); // Ensure this matches your server URL
+    const ws = new WebSocket('ws://localhost:8080'); 
     const observable = new Observable<MessageEvent>(obs => {
       ws.onmessage = obs.next.bind(obs);
       ws.onerror = obs.error.bind(obs);

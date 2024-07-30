@@ -1,7 +1,6 @@
 // app.component.ts
 
 import { Component } from '@angular/core';
-import { ThemeService } from './theme.service';
 
 @Component({
   selector: 'app-root',
@@ -11,14 +10,6 @@ import { ThemeService } from './theme.service';
 export class AppComponent {
   isDarkTheme = false;
 
-  constructor(private themeService: ThemeService) { }
+  constructor() { }
 
-  toggleTheme() {
-    this.isDarkTheme = !this.isDarkTheme;
-    if (this.isDarkTheme) {
-      this.themeService.enableDark();
-    } else {
-      this.themeService.enableLight();
-    }
-  }
 }
